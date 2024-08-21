@@ -10,10 +10,19 @@ const projects = [
     description: "A full-stack travel application designed to help users explore Japan. Built with a passion for Japanese culture and a desire to assist travelers.",
     techStack: "Next.JS 14, Node.JS, PostgreSQL, Redis",
     challenges: "Integrating google maps API, optimisations for mobile devices",
-    image: "/images/project1.png",
+    image: "/images/around-nippon.png",
     liveDemo: "https://around-nippon.konpeki.co.uk",
     github: "https://github.com/Beans69584/around-nippon"
   },
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio website built with Next.JS and Framer Motion. Designed to showcase my skills and projects.",
+    techStack: "Next.JS 14, Framer Motion, TypeScript",
+    challenges: "Designing a responsive layout, creating a method of updating content which is easy to use for myself",
+    image: "/images/portfolio.png",
+    liveDemo: "https://konpeki.co.uk",
+    github: "https://github.com/Beans69584/personal-portfolio"
+  }
 ];
 
 const Work: React.FC = () => {
