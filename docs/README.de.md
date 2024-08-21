@@ -5,6 +5,7 @@
 - [Persönliches Portfolio](#persönliches-portfolio)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Übersetzungen](#übersetzungen)
+  - [Einführung](#einführung)
   - [Verwendete Technologien](#verwendete-technologien)
 
 ## Übersetzungen
@@ -18,6 +19,8 @@
 - [日本語](/docs/README.ja.md)
 - [한국어](/docs/README.ko.md)
 - [中文](/docs/README.zh.md)
+
+## Einführung
 
 Dies ist eine persönliche Portfolio-Website, die ich nutze, um mehr Informationen über mich und meine zuvor abgeschlossenen Projekte bereitzustellen. Die Website wurde mit Next.js 14 erstellt.
 

@@ -5,6 +5,7 @@
 - [Personal Portfolio](#personal-portfolio)
   - [Table of Contents](#table-of-contents)
   - [Translations](#translations)
+  - [Introduction](#introduction)
   - [Technologies Used](#technologies-used)
 
 ## Translations
@@ -18,6 +19,8 @@
 - [日本語](/docs/README.ja.md)
 - [한국어](/docs/README.ko.md)
 - [中文](/docs/README.zh.md)
+
+## Introduction
 
 This is a personal portfolio website which I use to provide more information about myself and projects I have previously completed. The website is built using Next.js 14.
 
