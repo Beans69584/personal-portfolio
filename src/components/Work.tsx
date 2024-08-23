@@ -8,7 +8,15 @@ const projects = [
   {
     title: "Around Nippon",
     description: "A full-stack travel application designed to help users explore Japan. Built with a passion for Japanese culture and a desire to assist travelers.",
-    techStack: "Next.JS 14, Node.JS, PostgreSQL, Redis",
+    techStack: [
+      "devicon-nextjs-plain",
+      "devicon-typescript-plain",
+      "devicon-bun-plain",
+      "devicon-postgresql-plain",
+      "devicon-redis-plain",
+      "devicon-sass-original",
+      "devicon-google-plain"
+    ],
     challenges: "Integrating google maps API, optimisations for mobile devices",
     image: "/images/around-nippon.png",
     liveDemo: "https://around-nippon.konpeki.co.uk",
@@ -17,7 +25,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website built with Next.JS and Framer Motion. Designed to showcase my skills and projects.",
-    techStack: "Next.JS 14, Framer Motion, TypeScript",
+    techStack: ["devicon-nextjs-plain", "devicon-typescript-plain", "devicon-bun-plain", "devicon-css3-plain"],
     challenges: "Designing a responsive layout, creating a method of updating content which is easy to use for myself",
     image: "/images/portfolio.png",
     liveDemo: "https://konpeki.co.uk",
@@ -27,7 +35,7 @@ const projects = [
 
 const Work: React.FC = () => {
   return (
-    <motion.section 
+    <motion.section
       id="work"
       className={styles.work}
       initial={{ opacity: 0 }}
@@ -37,7 +45,7 @@ const Work: React.FC = () => {
       <h2>Featured Projects</h2>
       <div className={styles.workShowcase}>
         {projects.map((project, index) => (
-          <motion.div 
+          <motion.div
             key={uuidv4()}
             className={styles.workItem}
             initial={{ opacity: 0, y: 50 }}
@@ -45,9 +53,9 @@ const Work: React.FC = () => {
             transition={{ delay: index * 0.2 }}
           >
             <div className={styles.workImage}>
-              <Image 
-                src={project.image} 
-                alt={project.title} 
+              <Image
+                src={project.image}
+                alt={project.title}
                 layout="fill"
                 objectFit="cover"
               />
@@ -55,21 +63,25 @@ const Work: React.FC = () => {
             <div className={styles.workContent}>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <ul className={styles.projectDetails}>
-                <li><strong>Tech Stack:</strong> {project.techStack}</li>
-                <li><strong>Challenges:</strong> {project.challenges}</li>
-              </ul>
+              <div className={styles.techStack}>
+                {project.techStack.map((tech, techIndex) => (
+                  <span key={techIndex} className={styles.techTag}>
+                    <i className={tech}></i>
+                  </span>
+                ))}
+              </div>
+              <p><strong>Challenges:</strong> {project.challenges}</p>
               <div className={styles.projectLinks}>
-                <motion.a 
-                  href={project.liveDemo} 
+                <motion.a
+                  href={project.liveDemo}
                   className={styles.workLink}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Live Demo <i className="fas fa-external-link-alt" />
                 </motion.a>
-                <motion.a 
-                  href={project.github} 
+                <motion.a
+                  href={project.github}
                   className={styles.workLink}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

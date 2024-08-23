@@ -1,9 +1,17 @@
-// src/pages/_app.tsx
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { motion, AnimatePresence } from 'framer-motion'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <AnimatePresence mode='wait'>
       <motion.div
