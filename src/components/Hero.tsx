@@ -4,22 +4,34 @@ import styles from '../styles/Hero.module.css';
 import { smoothScroll } from '../utils/smoothScroll';
 
 const devIconSets = [
-  ["html5", "css3", "javascript", "react", "angular", "vuejs", "sass", "webpack", "gulp", "npm"],
-  ["nodejs", "php", "laravel", "django", "flask", "ruby", "rails", "spring", "dotnetcore"],
-  ["postgresql", "mysql", "mongodb", "redis", "oracle", "microsoftsqlserver", "sqlite", "mariadb"],
-  ["docker", "kubernetes", "jenkins", "ansible", "terraform", "vagrant"],
-  ["git", "github", "gitlab", "bitbucket", "jira", "trello"],
-  ["amazonwebservices", "googlecloud", "azure", "heroku", "nginx", "apache"],
-  ["typescript", "python", "java", "csharp", "cplusplus", "go", "rust", "scala", "kotlin", "swift"]
+  ["html5", "css3", "javascript", "typescript", "react", "angular", "vuejs", "nodejs", "express", "nestjs", "sass", "webpack", "gulp", "npm", "yarn", "babel", "bootstrap", "tailwindcss", "jquery", "materialui"],
+  ["php", "laravel", "symfony", "codeigniter", "ruby", "rails", "python", "django", "flask", "java", "spring", "dotnetcore", "csharp", "go", "rust", "scala", "kotlin", "swift", "dart", "elixir"],
+  ["postgresql", "mysql", "mongodb", "redis", "oracle", "microsoftsqlserver", "sqlite", "mariadb", "couchdb", "cassandra", "elasticsearch", "neo4j", "graphql", "influxdb"],
+  ["docker", "kubernetes", "jenkins", "ansible", "terraform", "vagrant", "prometheus", "grafana", "nginx", "apache", "consul", "rancher", "git", "github", "gitlab", "bitbucket"],
+  ["amazonwebservices", "googlecloud", "azure", "heroku", "digitalocean", "firebase", "cloudflare", "openstack", "vercel", "netlify", "linux", "ubuntu", "debian", "centos", "fedora", "redhat"],
+  ["vscode", "intellij", "phpstorm", "pycharm", "webstorm", "atom", "vim", "bash", "powershell", "jira", "trello", "confluence", "slack", "visualstudio"],
+  ["photoshop", "illustrator", "xd", "figma", "sketch", "inkscape", "gimp", "blender", "unity", "unrealengine", "aftereffects"],
+  ["chrome", "firefox", "safari", "opera", "androidstudio", "xcode", "eclipse"],
+  ["wordpress", "drupal", "magento", "woocommerce", "ghost", "jekyll", "hugo", "gatsby", "nuxtjs", "nextjs", "eleventy"],
+  ["jquery", "d3js", "threejs", "electron", "ionic", "xamarin", "flutter"],
+  ["cplusplus", "c", "objectivec", "perl", "haskell", "r", "matlab", "fortran", "erlang", "clojure", "fsharp", "ocaml", "julia", "lua"],
+  ["raspberrypi", "arduino"]
 ];
 
 const Hero: React.FC = () => {
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.backgroundAnimation}>
-        {devIconSets.map((iconSet, rowIndex) => (
-          <div key={rowIndex} className={styles.iconRow} style={{ animationDuration: `${100 + rowIndex * 20}s` }}>
-            {[...iconSet, ...iconSet, ...iconSet, ...iconSet].map((icon, iconIndex) => (
+        {[...devIconSets, ...devIconSets].map((iconSet, rowIndex) => (
+          <div 
+            key={rowIndex} 
+            className={styles.iconRow} 
+            style={{
+              animationDuration: `${150 + rowIndex * 20}s`,
+              animationDirection: rowIndex % 2 === 0 ? 'normal' : 'reverse'
+            }}
+          >
+            {[...iconSet, ...iconSet, ...iconSet, ...iconSet, ...iconSet].map((icon, iconIndex) => (
               <i
                 key={`${rowIndex}-${iconIndex}`}
                 className={`devicon-${icon}-plain colored ${styles.icon}`}
